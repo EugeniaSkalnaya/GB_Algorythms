@@ -62,69 +62,6 @@ public class SimpleRedBlackTreeExample {
         return node != null && node.color == Color.RED;
     }
 
-//private boolean add (int value){
-//        if (root != null){
-//            boolean result = addNode(root, value);
-//            root = reBalance(root);
-//            root.color = Color.BLACK;
-//            return result;
-//        }else{
-//            root = new SimpleNode();
-//            root.color = Color.BLACK;
-//            root.value = value;
-//            return true;
-//        }
-//
-//    private boolean addNode(SimpleNode node, int value) {
-//        if (node.value == value) {
-//            return false;
-//        } else {
-//            if (node.value > value) {
-//                if (node.leftKid != null) {
-//                    boolean result = addNode(node.leftKid, value);
-//                    node.leftKid = reBalance(node.leftKid);
-//                    return result;
-//                } else {
-//                    node.leftKid = new SimpleNode();
-//                    node.leftKid.color = Color.RED;
-//                    node.leftKid.value = value;
-//                    return true;
-//                }
-//            } else {
-//                if (node.rightKid != null) {
-//                    boolean result = addNode(node.rightKid, value);
-//                    node.rightKid = reBalance(node.rightKid);
-//                    return result;
-//                } else {
-//                    node.rightKid = new SimpleNode();
-//                    node.rightKid.color = Color.RED;
-//                    node.rightKid.value = value;
-//                    return true;
-//
-//                }
-//            }
-//        }
-//    }
-//    private static SimpleNode reBalance(SimpleNode node) {
-//        SimpleNode result = node;
-//        boolean needRebalance;
-//        do {
-//            needRebalance = false;
-//            if (result.rightKid != null && result.rightKid.color == Color.RED && result.leftKid == null || result.leftKid.color == Color.BLACK) {
-//                needRebalance = true;
-//                result = rightSwap(result);
-//            }
-//            if (result.leftKid != null && result.leftKid.color == Color.RED && result.leftKid.leftKid != null || result.leftKid.leftKid.color == Color.RED) {
-//                needRebalance = true;
-//                result = leftSwap(result);
-//            }
-//            if (result.leftKid != null && result.leftKid.color == Color.RED && result.rightKid != null && result.rightKid.color == Color.RED) {
-//                needRebalance = true;
-//                colorSwap(result);
-//            }
-//        } while (needRebalance);
-//        return result;
-//    }
 
     private static SimpleNode leftSwap(SimpleNode parent) {
         SimpleNode rightKid = parent.rightKid;
